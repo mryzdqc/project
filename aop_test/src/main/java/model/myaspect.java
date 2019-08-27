@@ -27,6 +27,7 @@ public class myaspect implements MethodBeforeAdvice,AfterReturningAdvice,MethodI
 	}
 	 public void afterThrowing(Method method, Object[] args, Object target, Exception ex) {
 		 System.out.println("ณ๖ดํมห");
+		 System.out.println("1111111");
 	 }
 	
 	
