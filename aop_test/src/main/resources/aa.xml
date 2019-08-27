@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- <bean  class="model.Type">
+		<constructor-arg index="0" value="111" type="int"></constructor-arg>
+		<constructor-arg index="1" value="222" type="String"></constructor-arg>
+		<property name="name" value="sssss"></property>
+	</bean> -->
+	
+	<!-- <bean class="model.Type2" autowire="constructor">
+		<property name="t"  ref="a1"></property>
+		
+	</bean> -->
+	<!-- 
+	<bean id ="pp" class="model.Type2" init-method="init" abstract="true">
+		<property name="name" value="111"></property>
+	</bean>
+ 
+ 	<bean id="my" parent="pp">
+ 		<property name="name" value="22"></property>
+ 		<property name="id" value="111"></property>
+ 	</bean> -->
+ 	
+ 	<!-- <bean id="p" class="model.myaspect"></bean> -->
+ 	
+ 	
+ 	<!--day8.25  -->
+ 	<!-- <bean id="t" class="model.Type">  目标对象
+		<constructor-arg index="0" value="1"></constructor-arg>
+		<constructor-arg index="1" value="日日日日"></constructor-arg>
+	</bean> -->
+	
+	<!-- <bean id="t1" class="model.Type2">  目标对象
+		<constructor-arg index="0" value="2"></constructor-arg>
+		<constructor-arg index="1" value="滚滚滚"></constructor-arg>
+	</bean> -->
+	
+	<!-- <bean id="p" class="model.dtaspect"></bean>  消息对象 -->
+	
+	<!-- <aop:config>
+		<aop:aspect ref="p">
+			<aop:pointcut id="pointcut" expression="execution(public * *(..))" />
+			<aop:before method="aa" pointcut-ref="pointcut" />
+			 <aop:after-returning method="bb" pointcut-ref="pointcut" returning="result" />
+			<aop:after method="cc" pointcut-ref="pointcut" />
+			<aop:around method="dd" pointcut-ref="pointcut" />
+			<aop:after-throwing method="ee" pointcut-ref="pointcut" throwing="e" /> 
+		</aop:aspect>
+	</aop:config> -->
+
+	<context:component-scan base-package="aop_test"></context:component-scan>
+	
+	
+	
+ 	
+ 	
+ 	
+
+</beans>
