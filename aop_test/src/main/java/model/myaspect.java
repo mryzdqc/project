@@ -29,6 +29,12 @@ public class myaspect implements MethodBeforeAdvice,AfterReturningAdvice,MethodI
 		 System.out.println("ณ๖ดํมห");
 		 System.out.println("1111111");
 	 }
-	
+	public static void main(String[] args) {
+		int b=1;
+		double a=2.6;
+		a=1+b;
+		a = (int)a;
+		
+	}
 	
 }
