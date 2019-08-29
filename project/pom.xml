@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>situ</groupId>
-  <artifactId>aop_test</artifactId>
+  <artifactId>project</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>aop_test Maven Webapp</name>
+  <name>project Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties> 
 <springframework.version>4.3.7.RELEASE</springframework.version> 
@@ -31,6 +31,13 @@
       <version>1</version>
     </dependency>
   
+  
+<!--文件上传  https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.3</version>
+		</dependency>
   
   
   <!-- SERVLET支持 -->
@@ -175,6 +182,6 @@
     </dependency>
 </dependencies>
   <build>
-    <finalName>aop_test</finalName>
+    <finalName>project</finalName>
   </build>
 </project>
