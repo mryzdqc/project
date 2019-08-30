@@ -22,8 +22,6 @@ public class TestController {
 	
 	@RequestMapping("index")
 	public String test(String txt,ModelMap m) {
-		//return "index";
-		//m.put("info", txt);
 		if(txt==null||txt.length()==0) txt="";
 		txt=" where book.name like '%"+txt+"%'";
 		m.put("list", service.select(txt));

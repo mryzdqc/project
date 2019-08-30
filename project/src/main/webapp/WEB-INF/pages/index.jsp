@@ -8,6 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<script type="text/javascript">
+function click1(id_arg){
+	//alert(id_arg);
+	if(confirm("确定要删除吗？")){
+		open("delete.action?id="+id_arg,"_self");
+	}
+}
+</script>
+
+
 <form action="index.action">
 <input name="txt">
 <input type="submit">
@@ -15,17 +26,17 @@
 <a href="add.action">新增</a>
 
 	<table>
-	<tr><td>id</td><td>名字</td><td>性别</td> <td>类别</td> <td>操作</td></tr>
-	
+	<tr><!-- <td>id</td> --><td>名字</td><td>性别</td> <td>类别</td> <td>操作</td></tr>
+		
 		<c:forEach items="${list}" var="r">
 		<tr>
-			<td>${r.id}</td>
+			<%-- <td>${r.id}</td> --%>
 			<td>${r.name}</td> 
 			<td>${r.sexname}</td>
 			<td>${r.typename}</td>
 			<td>
 				<a href="edit.action?id=${r.id}">修改</a>
-				<a href="delete.action?id=${r.id}">删除</a>
+				<a onclick="click1(${r.id})">删除</a>
 			</td>
 		</tr>
 		</c:forEach>
