@@ -2,15 +2,31 @@ package dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import entity.Book;
 @Repository
 public interface BookDao {
-	@Select("select book.* ,type.name typename from book inner join type on book.typeid=type.id ${txt}")
-	public List<Book> select(@Param("txt") String txt);
+//	@Select("select book.* ,type.name typename from book inner join type on book.typeid=type.id ${txt}")
+//	public List<Book> select(@Param("txt") String txt);
+	
+	
+	public List<Book> select(String txt);
 	
 	public Book selectById(int id);
+	
+	@Insert("insert into book(name,sex,typeid) values(#{name},#{sex},#{typeid})")
+	public int insert(Book b);
+	
+	@Delete("delete from book where id=#{id}")
+	public int delete(int id);
+	
+	@Update("update book set name=#{name},sex=#{sex},typeid=#{typeid} where id=#{id}")
+	public int update(Book b);
+
 }

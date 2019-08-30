@@ -5,33 +5,28 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dao.BookDao;
-import entity.Book;
-import service.BookService;
+import dao.TypeDao;
+import entity.Type;
+import service.TypeService;
 
 @Service
-public class BookService_Impl implements BookService{
+public class TypeService_Impl implements TypeService{
 	@Autowired
-	BookDao dao;
+	TypeDao dao;
 	
-	public List<Book> select(String txt) {
+	public List<Type> select(String txt) {
 		return dao.select(txt);
 	}
 
-	public Book selectById(int id) {
+	public Type selectById(int id) {
 		return dao.selectById(id);
 	}
 	
-	public int insert(Book b) {
+	public int insert(Type b) {
 		return dao.insert(b);
 	}
 	
 	public int delete(int id) {
 		return dao.delete(id);
 	}
-
-	public int update(Book b) {
-		return dao.update(b); 
-	}
-	
 }

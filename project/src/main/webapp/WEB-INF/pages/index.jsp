@@ -12,12 +12,22 @@
 <input name="txt">
 <input type="submit">
 </form>
+<a href="add.action">新增</a>
 
 	<table>
-	<tr><td>id</td><td>名字</td><td>性别</td> <td>类别</td> </tr>
+	<tr><td>id</td><td>名字</td><td>性别</td> <td>类别</td> <td>操作</td></tr>
 	
 		<c:forEach items="${list}" var="r">
-		<tr><td>${r.id}</td><td>${r.name}</td> <td>${r.sexname}</td> <td>${r.typename}</td></tr>
+		<tr>
+			<td>${r.id}</td>
+			<td>${r.name}</td> 
+			<td>${r.sexname}</td>
+			<td>${r.typename}</td>
+			<td>
+				<a href="edit.action?id=${r.id}">修改</a>
+				<a href="delete.action?id=${r.id}">删除</a>
+			</td>
+		</tr>
 		</c:forEach>
 	
 	</table>
